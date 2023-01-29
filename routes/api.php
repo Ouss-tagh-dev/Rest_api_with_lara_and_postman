@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\SclassController;
+use App\Http\Controllers\Api\SectionController;
 use App\Http\Controllers\Api\SubjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,14 @@ Route::post('/subject/store', [SubjectController::class, 'Store']);
 Route::get('/subject/edit/{id}', [SubjectController::class, 'Edit']);
 Route::post('/subject/update/{id}', [SubjectController::class, 'Update']);
 Route::get('/subject/delete/{id}', [SubjectController::class, 'Delete']);
+
+
+// Student Section Routes
+Route::get('/section', [SectionController::class, 'Index']);
+Route::post('/section/store', [SectionController::class, 'Store']);
+Route::get('/section/edit/{id}', [SectionController::class, 'Edit']);
+Route::post('/section/update/{id}', [SectionController::class, 'Update']);
+Route::get('/section/delete/{id}', [SectionController::class, 'Delete']);
 
 
 
